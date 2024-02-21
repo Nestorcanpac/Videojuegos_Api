@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listado de Desarrolladores</title>
+    <link rel="stylesheet" type="text/css" href="/css/llistat.css">
+</head>
+<body>
+<h1>Listado de Desarrolladores</h1>
+<ul>
+    <li th:each="desarrollador : ${desarrolladores}" th:text="${desarrollador.nombre}"></li>
+</ul>
+</body>
+</html>

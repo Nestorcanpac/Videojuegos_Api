@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listado de Videojuegos</title>
+    <link rel="stylesheet" type="text/css" href="/css/llistat.css">
+</head>
+<body>
+<h1>Listado de Videojuegos</h1>
+<ul>
+    <li th:each="videojuego : ${videojuegos}" th:text="${videojuego.nombre}"></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listado de Empresas</title>
+    <link rel="stylesheet" type="text/css" href="/css/llistat.css">
+</head>
+<body>
+<h1>Listado de Empresas</h1>
+<ul>
+    <li th:each="empresa : ${empresas}" th:text="${empresa.nombre}"></li>
+</ul>
+</body>
+</html>

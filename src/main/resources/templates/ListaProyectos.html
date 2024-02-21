@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Listado de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="/css/llistat.css">
+</head>
+<body>
+<h1>Listado de Clientes</h1>
+<ul>
+    <li th:each="proyecto_video_desa : ${proyecto_video_desas}" th:text="${proyecto_video_desa.id_proyecto}"></li>
+</ul>
+</body>
+</html>
