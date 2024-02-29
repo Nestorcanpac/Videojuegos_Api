@@ -16,15 +16,14 @@ public class Empresa {
     private String lugarCentral;
     private String nombre;
 
-    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Videojuego>videojuegosList;
 
-    public Empresa(int id_empresa, int numempleados, String lugarCentral, String nombre, List<Videojuego> videojuegosList) {
+
+    public Empresa(int id_empresa, int numempleados, String lugarCentral, String nombre) {
         this.id_empresa = id_empresa;
         this.numempleados = numempleados;
         this.lugarCentral = lugarCentral;
         this.nombre = nombre;
-        this.videojuegosList = videojuegosList;
+
     }
 
     public Empresa() {
@@ -62,11 +61,5 @@ public class Empresa {
         this.lugarCentral = lugarCentral;
     }
 
-    public List<Videojuego> getVideojuegosList() {
-        return videojuegosList;
-    }
 
-    public void setVideojuegosList(List<Videojuego> videojuegosList) {
-        this.videojuegosList = videojuegosList;
-    }
 }

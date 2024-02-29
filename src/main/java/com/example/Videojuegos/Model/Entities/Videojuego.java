@@ -17,28 +17,20 @@ public class Videojuego {
     private int precio;
     private String foto_caratula;
 
-
     @ManyToOne
     @JoinColumn(name = "id_empresa")
     private Empresa empresa;
 
-    @OneToMany(mappedBy = "videojuego",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Cliente> clienteList;
-
-    @OneToMany(mappedBy = "videojuego")
-    private Set<Proyectos_video_desa> proyectos_video_desaSet;
 
     public Videojuego() {
     }
 
-    public Videojuego(int id_videojuego, String nombre, int precio, String foto_caratula, Empresa empresa, List<Cliente> clienteList, Set<Proyectos_video_desa> proyectos_video_desaSet) {
+    public Videojuego(int id_videojuego, String nombre, int precio, String foto_caratula, Empresa empresa) {
         this.id_videojuego = id_videojuego;
         this.nombre = nombre;
         this.precio = precio;
         this.foto_caratula = foto_caratula;
         this.empresa = empresa;
-        this.clienteList = clienteList;
-        this.proyectos_video_desaSet = proyectos_video_desaSet;
     }
 
     public int getId_videojuego() {
@@ -73,6 +65,7 @@ public class Videojuego {
         this.foto_caratula = foto_caratula;
     }
 
+
     public Empresa getEmpresa() {
         return empresa;
     }
@@ -80,25 +73,6 @@ public class Videojuego {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
-
-    public List<Cliente> getClienteList() {
-        return clienteList;
-    }
-
-    public void setClienteList(List<Cliente> clienteList) {
-        this.clienteList = clienteList;
-    }
-
-    public Set<Proyectos_video_desa> getProyectos_video_desaSet() {
-        return proyectos_video_desaSet;
-    }
-
-
-
-    public void setProyectos_video_desaSet(Set<Proyectos_video_desa> proyectos_video_desaSet) {
-        this.proyectos_video_desaSet = proyectos_video_desaSet;
-    }
-
 }
 
 

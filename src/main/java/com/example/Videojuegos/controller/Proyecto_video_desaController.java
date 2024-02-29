@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
+
 public class Proyecto_video_desaController {
     private final Proyectos_Video_DesaRepository proyectosVideoDesaRepository;
 

@@ -15,20 +15,18 @@ public class Cliente {
     private String nombre;
 
 
-    @ManyToOne
-    @JoinColumn(name = "id_videojuego")
-    private Videojuego videojuego;
+
 
 
     public Cliente() {
     }
 
-    public Cliente(int id_cliente, int edad, String sexo, String nombre, Videojuego videojuego) {
+    public Cliente(int id_cliente, int edad, String sexo, String nombre) {
         this.id_cliente = id_cliente;
         this.edad = edad;
         this.sexo = sexo;
         this.nombre = nombre;
-        this.videojuego = videojuego;
+
     }
 
     public int getId_cliente() {
@@ -55,13 +53,7 @@ public class Cliente {
         this.sexo = sexo;
     }
 
-    public Videojuego getVideojuego() {
-        return videojuego;
-    }
 
-    public void setVideojuego(Videojuego videojuego) {
-        this.videojuego = videojuego;
-    }
 
     public String getNombre() {
         return nombre;
